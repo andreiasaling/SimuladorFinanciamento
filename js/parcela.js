@@ -12,9 +12,17 @@ export class Parcela {
         this.#saldo = saldo;
     }
 
-    //criar getters e setters, aguardar pra ver quais serão usados, para não
-    // criar de todos sem necessidade
     getSaldo () {
         return this.#saldo;
+    }
+
+    getDadosFormatados () {
+        const dados = [];
+        dados.push(this.#numero);
+        dados.push(this.#valor.toLocaleString('pt-BR',{style:'currency', currency: 'BRL'}));
+        dados.push(this.#amortizacao.toLocaleString('pt-BR',{style:'currency', currency: 'BRL'}));
+        dados.push(this.#juros.toLocaleString('pt-BR',{style:'currency', currency: 'BRL'}));
+        dados.push(this.#saldo.toLocaleString('pt-BR',{style:'currency', currency: 'BRL'}));
+        return dados;
     }
 }

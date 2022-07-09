@@ -30,4 +30,15 @@ export class Financiamento {
         }
     }
 
+    exibeParcelas () {
+        const parcelas = this.#parcelas.slice(1);
+        for (const parcela of parcelas) {
+            const linha = corpoTabela.insertRow(-1); // insere linha no final do elemento corpoTabela
+            for (const dado of parcela.getDadosFormatados()){
+                const celula = linha.insertCell(-1);
+                celular.textContent = dado;
+            }
+        }
+    }
+
 }

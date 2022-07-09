@@ -9,3 +9,9 @@ body {
     font: 20px sans-serif;
     color: #fff;
 }
+
+table, th, td {
+    border: 1px solid #fff;
+    border-collapse: collapse;
+    padding: 15px;
+}
