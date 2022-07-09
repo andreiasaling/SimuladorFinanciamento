@@ -14,5 +14,7 @@ export class Parcela {
 
     //criar getters e setters, aguardar pra ver quais serão usados, para não
     // criar de todos sem necessidade
-
+    getSaldo () {
+        return this.#saldo;
+    }
 }
